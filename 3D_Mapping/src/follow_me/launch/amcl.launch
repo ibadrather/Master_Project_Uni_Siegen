@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<launch>
+<!-- TODO: Add nodes here -->
+<arg name="map_file" default="$(find follow_me)/maps/map.yaml"/>
+
+<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+<!-- AMCL Node -->
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+  <remap from="scan" to="/scan"/>
+  <param name="odom_frame_id" value="odom"/>
+  <param name="odom_model_type" value="diff-corrected"/>
+  <param name="base_frame_id" value="robot_footprint"/>
+  <param name="global_frame_id" value="map"/>
+
+	<!-- Odom Parameters -->
+	<param name="odom_frame_id" value="odom"/>
+	<param name="odom_model_type" value="diff-corrected"/>
+	<param name="odom_alpha1" value="0.005"/>
+	<param name="odom_alpha2" value="0.005"/>
+	<param name="odom_alpha3" value="0.005"/>
+	<param name="odom_alpha4" value="0.005"/>
+
+	<!--Overall Filter-->
+	<param name="min_particles" value="40"/>
+	<param name="max_particles" value="500"/>
+	<param name="update_min_d" value="0.02"/>
+	<param name="update_min_a" value="0.005"/>
+	<param name="resample_interval" value="1"/>
+
+	<!--Laser Parameters -->
+	<param name="laser_model_type" value="likelihood_field"/>
+	<param name="laser_max_beams" value="64"/>
+
+
+  <!-- If you choose to define initial pose here -->
+  <param name="initial_pose_x" value="0"/>
+  <param name="initial_pose_y" value="0"/>
+  <param name="initial_pose_a" value="-1.57"/>
+  </node>
+
+<!-- Move Base -->
+  <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
+  <remap from="scan" to="/scan"/>
+  <param name="base_global_planner" value="navfn/NavfnROS" />
+  <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
+  <rosparam file="$(find follow_me)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+  <rosparam file="$(find follow_me)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+  <rosparam file="$(find follow_me)/config/local_costmap_params.yaml" command="load" />
+  <rosparam file="$(find follow_me)/config/global_costmap_params.yaml" command="load" />
+  <rosparam file="$(find follow_me)/config/base_local_planner_params.yaml" command="load" />
+
+  </node>
+
+</launch>
