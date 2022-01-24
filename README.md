@@ -48,3 +48,7 @@ Then run using the following command.
 Move the robot around in the environment with appropriate speed. This will build the map. Once you are done close the terminals. To view the output, use the following commands.
 
       rtabmap-databaseViewer ~/.ros/rtabmap.db
+
+## SLAM-Gmapping
+
+## Path Planning
