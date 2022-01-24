@@ -1,6 +1,8 @@
 # Master Project Uni Siegen
 Robotics Master Project - SLAM and Path Planning
 
+## 3D Mapping
+
       git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
   
 Install the rtabmap package from ROS
