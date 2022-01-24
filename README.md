@@ -2,16 +2,18 @@
 Robotics Master Project - SLAM and Path Planning
 
   $ git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
+  
 Install the rtabmap package from ROS
-  $ sudo apt install ros-noetic-rtabmap-ros
+
+      sudo apt install ros-noetic-rtabmap-ros
 Installing dependencies
-    $ cd 3D_Mapping
-    $ sudo apt-get update -y
-    $ sudo apt-get install -y xterm
-    $ rosdep install --from-paths src --ignore-src -r -y
+      cd 3D_Mapping
+      sudo apt-get update -y
+      sudo apt-get install -y xterm
+      rosdep install --from-paths src --ignore-src -r -y
  Write a bash script which will run all the necessary files.
-    $ touch rtab_mapping.sh
-    $ chmod +x rtab_mapping.sh
+      touch rtab_mapping.sh
+      chmod +x rtab_mapping.sh
   
 Copy the following contents to to rtab_mapping.sh file.
 
