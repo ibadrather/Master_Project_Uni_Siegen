@@ -3,7 +3,7 @@ Master Project: SLAM and Path Planning for **Follow Me Function** in an autonous
 
 ### Project Documentation
 
-## 1. 3D Mapping
+## 1. 3D-Mapping with RTAB Mapping Package
 
 Using this package you can build a map of any environment. Just save your gazebo world file (*world_name.world*) in the in **3D_Mapping/src/follow_me/worlds/** folder and update the world.launch file in in **3D_Mapping/src/follow_me/launch/** folder.
 
