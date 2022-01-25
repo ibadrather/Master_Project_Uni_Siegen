@@ -3,6 +3,8 @@ Robotics Master Project - SLAM and Path Planning
 
 ## 3D Mapping
 
+Using this package you can build a map of any environment. Just save your gazebo world file (*world_name.world*) in the in *follow_me/worlds/* folder and update the world.launch file in in follow_me/launch/
+
       git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
   
 Install the rtabmap package from ROS
@@ -35,5 +37,6 @@ Once you are done close the terminals. To view the output rtabmap database, use 
       rtabmap-databaseViewer ~/.ros/rtabmap.db
 
 ## SLAM-Gmapping
+
 
 ## Path Planning
