@@ -5,13 +5,15 @@ Robotics Master Project - SLAM and Path Planning
 
 Using this package you can build a map of any environment. Just save your gazebo world file (*world_name.world*) in the in **3D_Mapping/src/follow_me/worlds/** folder and update the world.launch file in in **3D_Mapping/src/follow_me/launch/** folder.
 
+Clone this repository:
+
       git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
   
-Install the rtabmap package from ROS
+Install the rtabmap package from ROS:
 
       sudo apt install ros-noetic-rtabmap-ros
       
-Installing dependencies
+Installing dependencies:
 
       cd 3D_Mapping
       sudo apt-get update -y
@@ -32,20 +34,22 @@ To save the map at any stage run in any terminal:
       
 This will save the map_name.pgm and map_name.yaml file in the current working directory of the terminal.
 
-Once you are done close the terminals. To view the output rtabmap database, use the following commands.
+Once you are done close the terminals. To view the output rtabmap database, use the following command in the terminal:
 
       rtabmap-databaseViewer ~/.ros/rtabmap.db
 
 ## SLAM-Gmapping
 Using this package you can build a map of any environment. Just save your gazebo world file (*world_name.world*) in the in **Follow_me_gmapping/src/follow_me/worlds/** folder and update the world.launch file in in **Follow_me_gmapping/src/follow_me/launch/** folder.
 
+Clone this repository
+
       git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
   
-Install the rtabmap package from ROS
+Install the rtabmap package from ROS:
 
       sudo apt install ros-noetic-gmapping
       
-Installing dependencies
+Installing dependencies:
 
       cd Follow_me_gmapping
       sudo apt-get update -y
@@ -69,7 +73,7 @@ Clone this repository:
 
       git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
 
-Install the necesarry packages from ROS
+Install the necesarry packages from ROS:
 
       sudo apt-get install ros-kinetic-gmapping
       sudo apt-get install ros-kinetic-move-base
@@ -86,7 +90,9 @@ To perform navigation:
 
       cd src/scripts
       chmod +x navigation.sh
-      Then run the file with the command:
+      
+Then run the file with the command:
+      
       ./navigation.sh
       
 Give the robot its 2D Nav Goal in Rviz console and the path planner will calculate a trajectory for it and tghe robot will start going to its goal position.
