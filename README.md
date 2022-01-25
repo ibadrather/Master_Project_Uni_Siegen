@@ -16,36 +16,21 @@ Installing dependencies
       sudo apt-get install -y xterm
       rosdep install --from-paths src --ignore-src -r -y
       
- Write a bash script which will run all the necessary files.
- 
-      touch rtab_mapping.sh
-      chmod +x rtab_mapping.sh
+Now to map the environment make the mapping.sh file executable and run it. This file will run all the necessary nodes automatically.
+
+      cd /src/follow_me/scripts/
+      chmod +x mapping.sh
+      ./mapping.sh
+      
   
-Copy the following contents to to rtab_mapping.sh file.
+Move the robot around in the environment with appropriate speed. This will build the map.
+To save the map at any stage run in any terminal:
+      
+      rosrun map_server map_saver -f map_name
+      
+This will save the map_name.pgm and map_name.yaml file in the current working directory of the terminal.
 
-      #!/bin/bash
-      
-      catkin_make;
-      
-      sleep 5
-      
-      # Launch the nodes
-      
-      xterm  -e "source devel/setup.bash; roslaunch follow_me world.launch" &
-      
-      sleep 10
-
-      xterm  -e "source devel/setup.bash;rosrun teleop_twist_keyboard teleop_twist_keyboard.py"&
-      
-      sleep 5
-
-      xterm  -e "source devel/setup.bash; roslaunch follow_me mapping.launch"
-  
-Then run using the following command.
-
-      ./rtab_mapping.sh
-  
-Move the robot around in the environment with appropriate speed. This will build the map. Once you are done close the terminals. To view the output, use the following commands.
+Once you are done close the terminals. To view the output rtabmap database, use the following commands.
 
       rtabmap-databaseViewer ~/.ros/rtabmap.db
 
