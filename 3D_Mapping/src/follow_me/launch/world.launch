@@ -35,6 +35,6 @@
               -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
   <!--launch rviz-->
-  <node name="rviz" pkg="rviz" type="rviz" respawn="false"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find follow_me)/rvizConfig/mapping_config.rviz"/>
 
 </launch>

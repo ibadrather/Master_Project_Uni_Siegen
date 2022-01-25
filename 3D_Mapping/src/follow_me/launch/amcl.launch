@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 <!-- TODO: Add nodes here -->
-<arg name="map_file" default="$(find follow_me)/maps/map.yaml"/>
+<arg name="map_file" default="$(find follow_me)/maps/good_map_1.yaml"/>
 
 <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
@@ -36,7 +36,7 @@
   <!-- If you choose to define initial pose here -->
   <param name="initial_pose_x" value="0"/>
   <param name="initial_pose_y" value="0"/>
-  <param name="initial_pose_a" value="-1.57"/>
+  <param name="initial_pose_a" value="0"/>
   </node>
 
 <!-- Move Base -->
