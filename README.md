@@ -104,4 +104,3 @@ To use this for your own Gazebo World, copy the **world file** (my_world.world) 
       ./navigation.sh
       
 Then you can send the navigation goals to the robot and it will calculate a path and then go the target position in the environment.
-
