@@ -99,4 +99,9 @@ Then run the file with the command:
       
 Give the robot its 2D Nav Goal in Rviz console and the path planner will calculate a trajectory for it and tghe robot will start going to its goal position.
 
+To use this for your own Gazebo World, copy the **world file** (my_world.world) to **/Path_Planning/src/worlds/** folder and the **my_world_map.pgm** & **my_world_map.yaml** files to **Path_Planning/src/map/** folder. Update the **navigation.sh** file and then run it using:
+
+      ./navigation.sh
+      
+Then you can send the navigation goals to the robot and it will calculate a path and then go the target position in the environment.
 
