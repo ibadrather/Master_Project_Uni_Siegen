@@ -3,7 +3,7 @@ Robotics Master Project - SLAM and Path Planning
 
 ## 3D Mapping
 
-Using this package you can build a map of any environment. Just save your gazebo world file (*world_name.world*) in the in `3D_Mapping/src/follow_me/worlds/´ folder and update the world.launch file in in ´3D_Mapping/src/follow_me/launch/´ folder.
+Using this package you can build a map of any environment. Just save your gazebo world file (*world_name.world*) in the in **3D_Mapping/src/follow_me/worlds/** folder and update the world.launch file in in **3D_Mapping/src/follow_me/launch/** folder.
 
       git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
   
@@ -37,7 +37,7 @@ Once you are done close the terminals. To view the output rtabmap database, use 
       rtabmap-databaseViewer ~/.ros/rtabmap.db
 
 ## SLAM-Gmapping
-Using this package you can build a map of any environment. Just save your gazebo world file (*world_name.world*) in the in *Follow_me_gmapping/src/follow_me/worlds/* folder and update the world.launch file in in Follow_me_gmapping/src/follow_me/launch/ folder.
+Using this package you can build a map of any environment. Just save your gazebo world file (*world_name.world*) in the in **Follow_me_gmapping/src/follow_me/worlds/** folder and update the world.launch file in in **Follow_me_gmapping/src/follow_me/launch/** folder.
 
       git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
   
