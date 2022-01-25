@@ -58,10 +58,37 @@ Now to map the environment make the gslam.sh file executable and run it. This fi
       chmod +x gslam.sh
       ./gslam.sh
   
-Move the robot around in the environment with appropriate speed. This will build the map. To save the map at any stage run in any terminal:
-      
+Move the robot around in the environment using teleop with appropriate speed. This will build the map. To save the map at any stage run in any terminal:
+
       rosrun map_server map_saver -f map_name
       
 This will save the map_name.pgm and map_name.yaml file in the current working directory of the terminal.
 
 ## Path Planning
+Clone this repository:
+
+      git clone https://github.com/ibadrather/Master_Project_Uni_Siegen.git
+
+Install the necesarry packages from ROS
+
+      sudo apt-get install ros-kinetic-gmapping
+      sudo apt-get install ros-kinetic-move-base
+      sudo apt-get install ros-kinetic-navigation
+      
+Install other dependencies:
+
+      cd Path_Planning
+      rosdep install --from-paths src --ignore-src -r -y
+      sudo apt-get update -y
+      sudo apt-get install -y xterm
+      
+To perform navigation:
+
+      cd src/scripts
+      chmod +x navigation.sh
+      Then run the file with the command:
+      ./navigation.sh
+      
+Give the robot its 2D Nav Goal in Rviz console and the path planner will calculate a trajectory for it and tghe robot will start going to its goal position.
+
+
