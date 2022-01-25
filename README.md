@@ -32,7 +32,7 @@ To save the map at any stage run in any terminal:
       
       rosrun map_server map_saver -f map_name
       
-This will save the map_name.pgm and map_name.yaml file in the current working directory of the terminal.
+This will save the map_name.pgm and map_name.yaml files in the current working directory of the terminal.
 
 Once you are done close the terminals. To view the output rtabmap database, use the following command in the terminal:
 
@@ -66,7 +66,7 @@ Move the robot around in the environment using teleop with appropriate speed. Th
 
       rosrun map_server map_saver -f map_name
       
-This will save the map_name.pgm and map_name.yaml file in the current working directory of the terminal.
+This will save the map_name.pgm and map_name.yaml files in the current working directory of the terminal.
 
 ## Path Planning
 Clone this repository:
