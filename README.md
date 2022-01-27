@@ -1,5 +1,5 @@
 # Master Project Uni Siegen
-Master Project: SLAM and Path Planning for **Follow Me Function** in an autonous delivery robot under the guidance of *Prof. Dr.-Ing. Stephen Schmidt*
+Master Project: SLAM and Path Planning for **Follow Me Function** in an autonomous delivery robot under the guidance of *Prof. Dr.-Ing. Stephen Schmidt*
 
 ### Project Documentation
 
